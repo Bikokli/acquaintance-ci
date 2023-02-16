@@ -1,18 +1,19 @@
 
-import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class MaxServiceTest {
     @Test
-    public void shouldFindMax() {
+    public static void shouldFindMax() {
         MaxService service = new MaxService();
         int a = 5;
         int b = 3;
 
-        int expected=a;
-        int actual=service.max(a,b);
+        int expected = a;
+        int actual = service.max(a, b);
 
-        Assertion.assertEquals(expected,actual);
+       Assertions.assertEquals(expected, actual);
     }
+
 
 }
